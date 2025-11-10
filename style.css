@@ -1,231 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*, html{
-    font-family: "Montserrat Alternates", sans-serif;
-}
-
-:root {
-    --nav-bg: rgba(0, 0, 0, 0.85);
-    --content-bg: rgba(0, 0, 0, 0.55);
-    --card-width: 260px;
-    --card-height: 200px;
-    --accent: #00bfa5;
-}
-
-/* smooth scroll */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Reset / base */
-* { box-sizing: border-box; }
-body {
-    margin: 0;
-    font-family: "Segoe UI", sans-serif;
-    background: #101010;
-    color: #fff;
-    overflow-x: hidden;
-}
-
-/* NAV */
-nav#mainNav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: var(--nav-bg);
-    backdrop-filter: blur(8px);
-    display: flex;
-    justify-content: center;
-    z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-}
-
-nav#mainNav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 16px 22px;
-    display: block;
-    transition: background 0.2s, transform 0.15s;
-    font-weight: 600;
-}
-nav#mainNav a:hover,
-nav#mainNav a.active {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-2px);
-}
-
-/* HEADER */
-header#home {
-    height: 100vh;
-    background: linear-gradient(180deg, #00bfa5, #00468b);
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-header .overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.45);
-}
-
-.header-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    color: #fff;
-    padding: 20px;
-}
-.header-content h1 {
-    margin: 0 0 8px 0;
-    font-size: clamp(1.8rem, 4vw, 3rem);
-}
-.header-content p {
-    margin: 0;
-    font-size: 1.05rem;
-}
-
-/* SECTION BASE */
-section {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 80px 20px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    isolation: isolate;
-    overflow: hidden; /* важно для градиентов */
-}
-
-/* background overlay for color harmony */
-section::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.45);
-    backdrop-filter: brightness(0.9) saturate(0.8);
-    z-index: 0;
-}
-
-/* gradient top and bottom (cinematic fade) */
-section::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    background:
-        linear-gradient(to bottom, rgba(0,0,0,0.75), transparent 20%),
-        linear-gradient(to top, rgba(0,0,0,0.75), transparent 20%);
-    pointer-events: none;
-}
-
-/* Backgrounds */
-.bg1 { background: url(img/minerals.webp) center/cover no-repeat; }
-.bg2 { background: url(img/water.jpg) center/cover no-repeat; }
-.bg3 { background: url(img/les.jpg) center/cover no-repeat; }
-.bg4 { background: url(img/ogorod.jpg) center/cover no-repeat; }
-
-.content {
-    position: relative;
-    z-index: 2;
-    background: var(--content-bg);
-    padding: 40px;
-    border-radius: 16px;
-    max-width: 1100px;
-    width: 92%;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
-}
-
-/* CARDS */
-.cards {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 28px;
-    margin-top: 28px;
-}
-
-.card {
-    width: var(--card-width);
-    height: var(--card-height);
-    border-radius: 14px;
-    position: relative;
-    overflow: hidden;
-    background-image: var(--img);
-    background-size: cover;
-    background-position: center;
-    transition: all 0.4s ease;
-    opacity: 0;
-    transform: translateY(36px);
-    outline: 2px solid rgba(255, 255, 255, 0.3);
-    outline-offset: 3px;
-    box-shadow: 0 0 20px rgba(0, 255, 200, 0.25);
-}
-
-/* appear animation */
-.card.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* hover glow */
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(0, 255, 170, 0.6);
-    outline-color: rgba(0, 255, 200, 0.6);
-}
-
-/* TEXT ON CARD */
-.card span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2.5rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    background-image: var(--img);
-    background-size: cover;
-    background-position: center;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: whitesmoke;
-    text-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
-}
-
-/* SMOOTH SCROLLBAR */
-::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-track { background: #0b0b0b; }
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, var(--accent), #1e90ff);
-    border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover { opacity: 0.95; }
-
-/* FOOTER */
-footer {
-    background: #000;
-    color: #fff;
-    text-align: center;
-    padding: 18px 10px;
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
-}
-
-/* ADAPTIVE */
-@media (max-width: 900px) {
-    .cards { gap: 18px; }
-    :root { --card-width: 220px; --card-height: 170px; }
-}
-@media (max-width: 600px) {
-    nav#mainNav a { padding: 12px 10px; font-size: 14px; }
-    .header-content h1 { font-size: 1.6rem; }
-    .content { padding: 24px; }
-    :root { --card-width: 180px; --card-height: 140px; }
-}
+*, html{    font-family: "Montserrat Alternates", sans-serif;}:root {    --nav-bg: rgba(0, 0, 0, 0.85);    --content-bg: rgba(0, 0, 0, 0.55);    --card-width: 260px;    --card-height: 200px;    --accent: #00bfa5;}/* smooth scroll */html {    scroll-behavior: smooth;}/* Reset / base */
+* { box-sizing: border-box; }body {    margin: 0;    font-family: "Segoe UI", sans-serif;    background: #101010;    color: #fff;
+    overflow-x: hidden;}/* NAV */nav#mainNav {    position: fixed;    top: 0;    left: 0;    width: 100%;    background: var(--nav-bg);
+    backdrop-filter: blur(8px);    display: flex;    justify-content: center;    z-index: 1000;    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}nav#mainNav a {    color: #fff;    text-decoration: none;    padding: 16px 22px;    display: block;    transition: background 0.2s, transform 0.15s;
+    font-weight: 600;}nav#mainNav a:hover,nav#mainNav a.active {    background: rgba(255, 255, 255, 0.1);    transform: translateY(-2px);
+}/* HEADER */header#home {    height: 100vh;    background: linear-gradient(180deg, #00bfa5, #00468b);    position: relative;    display: flex;
+    align-items: center;    justify-content: center;}header .overlay {    position: absolute;    inset: 0;    background: rgba(0, 0, 0, 0.45);
+}.header-content {    position: relative;    z-index: 2;    text-align: center;    color: #fff;    padding: 20px;}.header-content h1 {    margin: 0 0 8px 0;
+    font-size: clamp(1.8rem, 4vw, 3rem);}.header-content p {    margin: 0;    font-size: 1.05rem}/* SECTION BASE */section {    min-height: 100vh;
+    display: flex;    align-items: center;    justify-content: center;    flex-direction: column;    text-align: center;    padding: 80px 20px;
+    background-size: cover;    background-position: center;    position: relative;    isolation: isolate;    overflow: hidden; /* важно для градиентов */
+}/* background overlay for color harmony */section::before {    content: "";    position: absolute;    inset: 0;    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: brightness(0.9) saturate(0.8);    z-index: 0;}/* gradient top and bottom (cinematic fade) */section::after {    content: "";
+    position: absolute;    inset: 0;    z-index: 1;    background:        linear-gradient(to bottom, rgba(0,0,0,0.75), transparent 20%),        linear-gradient(to top, rgba(0,0,0,0.75), transparent 20%);
+    pointer-events: none;}/* Backgrounds */.bg1 { background: url(img/minerals.webp) center/cover no-repeat; }.bg2 { background: url(img/water.jpg) center/cover no-repeat; }.bg3 { background: url(img/les.jpg) center/cover no-repeat; }
+.bg4 { background: url(img/ogorod.jpg) center/cover no-repeat; }.content {    position: relative;    z-index: 2;    background: var(--content-bg);
+    padding: 40px;    border-radius: 16px;    max-width: 1100px;    width: 92%;    box-shadow: 0 0 20px rgba(0, 0, 0, 1);}/* CARDS */
+.cards {    display: flex;    justify-content: center;    flex-wrap: wrap;    gap: 28px;    margin-top: 28px;}.card {    width: var(--card-width);
+    height: var(--card-height);    border-radius: 14px;    position: relative;    overflow: hidden;    background-image: var(--img);    background-size: cover;
+    background-position: center;    transition: all 0.4s ease;    opacity: 0;    transform: translateY(36px);    outline: 2px solid rgba(255, 255, 255, 0.3);    outline-offset: 3px;
+    box-shadow: 0 0 20px rgba(0, 255, 200, 0.25);}/* appear animation */.card.show {    opacity: 1;    transform: translateY(0);}/* hover glow */
+.card:hover {    transform: scale(1.05);    box-shadow: 0 0 25px rgba(0, 255, 170, 0.6);    outline-color: rgba(0, 255, 200, 0.6);}/* TEXT ON CARD */
+.card span {    position: absolute;    top: 50%;    left: 50%;    transform: translate(-50%, -50%);    font-size: 2.5rem;    font-weight: 800;    text-transform: uppercase;
+    background-image: var(--img);    background-size: cover;    background-position: center;    -webkit-background-clip: text;    background-clip: text;
+    color: whitesmoke;    text-shadow: 0 0 15px rgba(0, 0, 0, 0.7);}/* SMOOTH SCROLLBAR */::-webkit-scrollbar { width: 10px; }::-webkit-scrollbar-track { background: #0b0b0b; }
+::-webkit-scrollbar-thumb {    background: linear-gradient(180deg, var(--accent), #1e90ff);    border-radius: 10px;}
+::-webkit-scrollbar-thumb:hover { opacity: 0.95; }/* FOOTER */footer {    background: #000;    color: #fff;    text-align: center;    padding: 18px 10px;
+    font-size: 0.95rem;    letter-spacing: 0.5px;}/* ADAPTIVE */@media (max-width: 900px) {    .cards { gap: 18px; }    :root { --card-width: 220px; --card-height: 170px; }
+}@media (max-width: 600px) {    nav#mainNav a { padding: 12px 10px; font-size: 14px; }    .header-content h1 { font-size: 1.6rem; }    .content { padding: 24px; }    :root { --card-width: 180px; --card-height: 140px; }}
