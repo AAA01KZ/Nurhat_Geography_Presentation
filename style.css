@@ -114,10 +114,10 @@ section {
 }
 
 /* Секциялардың фондық суреттері (немесе түстері) */
-.bg1 { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/economy.jpg') center/cover no-repeat; }
-.bg2 { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/adi.jpg') center/cover no-repeat; }
-.bg3 { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/world.jpg') center/cover no-repeat; }
-.bg4 { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/kazakhstan.jpg') center/cover no-repeat; }
+.bg1 { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/econ.jpg') center/cover no-repeat; }
+.bg2 { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/econ2.jpg') center/cover no-repeat; }
+.bg3 { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/map.jpg') center/cover no-repeat; }
+.bg4 { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/world.jpg') center/cover no-repeat; }
 
 /* Контент блогы */
 .content {
