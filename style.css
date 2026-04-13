@@ -114,10 +114,10 @@ section {
 }
 
 /* Секциялардың фондық суреттері (немесе түстері) */
-.bg1 { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/econ.jpg') center/cover no-repeat; }
-.bg2 { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/Econ2.jpg') center/cover no-repeat; }
-.bg3 { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/map.jpg') center/cover no-repeat; }
-.bg4 { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/world.jpg') center/cover no-repeat; }
+.bg1 { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/train.jpg') center/cover no-repeat; }
+.bg2 { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/highway.jpg') center/cover no-repeat; }
+.bg3 { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/port.jpg') center/cover no-repeat; }
+.bg4 { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/logistics.jpg') center/cover no-repeat; }
 
 /* Контент блогы */
 .content {
@@ -161,7 +161,7 @@ section p {
     border-radius: 15px;
     position: relative;
     overflow: hidden;
-    background: var(--img, linear-gradient(45deg, #3a7bd5, #00d2ff));
+    background: linear-gradient(45deg, #2c3e50, #2980b9);
     background-size: cover;
     background-position: center;
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
