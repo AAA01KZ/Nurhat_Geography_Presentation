@@ -1,10 +1,7 @@
-// ==== Smooth scroll with nav offset ====
-// Используем обработчик клика, чтобы плавно скроллить и учитывать высоту фиксированной навигации
 const nav = document.getElementById('mainNav');
 const navLinks = nav.querySelectorAll('a');
 
 function getNavOffset(){
-	// возвращаем высоту навигации (если есть рамки/паддинги, берём полную высоту)
 	return nav.getBoundingClientRect().height;
 }
 
@@ -17,15 +14,13 @@ navLinks.forEach(link => {
 		e.preventDefault();
 
 		const navOffset = getNavOffset();
-		// координата целевого элемента относительно документа
 		const targetY = targetEl.getBoundingClientRect().top + window.scrollY;
-		const scrollToY = targetY - navOffset + 1; // +1 чтобы элемент был виден под навом
+		const scrollToY = targetY - navOffset + 1;
 
 		window.scrollTo({top: scrollToY, behavior: 'smooth'});
 	});
 });
 
-// Подсветка активного пункта меню при скролле
 function highlightNav(){
 	const fromTop = window.scrollY + getNavOffset() + 5;
 	navLinks.forEach(link => {
@@ -43,7 +38,6 @@ function highlightNav(){
 window.addEventListener('scroll', highlightNav);
 window.addEventListener('load', highlightNav);
 
-// ==== Карточки: появление при скролле (только карточки анимируются) ====
 const cards = document.querySelectorAll('.fade-card');
 function revealCards(){
 	const trigger = window.innerHeight * 0.86;
@@ -55,7 +49,6 @@ function revealCards(){
 window.addEventListener('scroll', revealCards);
 window.addEventListener('load', revealCards);
 
-// ==== Дополнительно: если окна меняют размер, повторим проверку (например на мобильных) ====
 window.addEventListener('resize', () => {
 	revealCards();
 	highlightNav();
