@@ -1,7 +1,7 @@
-/* Google Fonts жүктеу */
+/* КОПИПАСТА НЕ ПРИВЕТСТВУЕТСЯ, Напишите сами */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* Негізгі баптаулар */
+/* КОПИПАСТА НЕ ПРИВЕТСТВУЕТСЯ, Напишите сами */
 :root {
     --nav-bg: rgba(15, 32, 39, 0.95);
     --content-bg: rgba(20, 30, 48, 0.85);
@@ -30,7 +30,6 @@ body {
     line-height: 1.6;
 }
 
-/* Навигациялық мәзір */
 nav#mainNav {
     position: fixed;
     top: 0;
@@ -63,7 +62,6 @@ nav#mainNav a.active {
     background: rgba(255, 255, 255, 0.05);
 }
 
-/* Хедер (Басты бет) */
 header#home {
     height: 100vh;
     background: linear-gradient(135deg, #1e3c72, #2a5298);
@@ -102,7 +100,6 @@ header .overlay {
     opacity: 0.9;
 }
 
-/* Секциялардың негізгі стилі */
 section {
     min-height: 100vh;
     display: flex;
@@ -113,13 +110,11 @@ section {
     background-attachment: fixed;
 }
 
-/* Секциялардың фондық суреттері (немесе түстері) */
 .bg1 { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/train.jpg') center/cover no-repeat; }
 .bg2 { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/highway.jpg') center/cover no-repeat; }
 .bg3 { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/port.jpg') center/cover no-repeat; }
 .bg4 { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/logistics.jpg') center/cover no-repeat; }
 
-/* Контент блогы */
 .content {
     position: relative;
     z-index: 2;
@@ -146,7 +141,6 @@ section p {
     text-align: justify;
 }
 
-/* Карточкалар жүйесі */
 .cards {
     display: flex;
     justify-content: center;
@@ -174,7 +168,6 @@ section p {
     cursor: default;
 }
 
-/* Пайда болғандағы анимация */
 .card.show {
     opacity: 1;
     transform: translateY(0);
@@ -196,7 +189,6 @@ section p {
     text-align: center;
 }
 
-/* Кесте стилі */
 .table-container {
     margin-top: 30px;
     border-radius: 10px;
@@ -227,7 +219,6 @@ table tr:hover {
     background: rgba(255, 255, 255, 0.1);
 }
 
-/* Scrollbar дизайны */
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -241,7 +232,6 @@ table tr:hover {
     border-radius: 5px;
 }
 
-/* Футер */
 footer {
     background: #050b10;
     color: #fff;
@@ -250,7 +240,6 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Бейімделгіш дизайн (Adaptive) */
 @media (max-width: 900px) {
     :root {
         --card-width: 240px;
