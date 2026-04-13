@@ -1,3 +1,4 @@
+// КОПИПАСТА НЕ ПРИВЕТСТВУЕТСЯ, Напишите сами
 const nav = document.getElementById('mainNav');
 const navLinks = nav.querySelectorAll('a');
 
