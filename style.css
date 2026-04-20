@@ -3,13 +3,13 @@
 
 /* КОПИПАСТА НЕ ПРИВЕТСТВУЕТСЯ, Напишите сами */
 :root {
-    --nav-bg: rgba(15, 32, 39, 0.95);
-    --content-bg: rgba(20, 30, 48, 0.85);
+    --nav-bg: rgba(15, 12, 25, 0.95);
+    --content-bg: rgba(26, 11, 46, 0.9);
     --card-width: 280px;
     --card-height: 200px;
-    --accent: #00d2ff;
-    --accent-dark: #3a7bd5;
-    --text-white: #ffffff;
+    --accent: #bc13fe;
+    --accent-dark: #7a1fa2;
+    --text-white: #e0e0e0;
 }
 
 * {
@@ -110,11 +110,10 @@ section {
     background-attachment: fixed;
 }
 
-.bg1 { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/train.jpg') center/cover no-repeat; }
-.bg2 { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/highway.jpg') center/cover no-repeat; }
-.bg3 { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/port.jpg') center/cover no-repeat; }
-.bg4 { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/logistics.jpg') center/cover no-repeat; }
-
+.bg1 { background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef') center/cover no-repeat; }
+.bg2 { background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1516467508483-a7212febe31a') center/cover no-repeat; }
+.bg3 { background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1444858291040-58f756a3bdd6') center/cover no-repeat; }
+.bg4 { background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1464226184884-fa280b87c399') center/cover no-repeat; }
 .content {
     position: relative;
     z-index: 2;
@@ -155,7 +154,7 @@ section p {
     border-radius: 15px;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(45deg, #2c3e50, #2980b9);
+    background: linear-gradient(45deg, #1a0b2e, #4a148c);
     background-size: cover;
     background-position: center;
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -164,7 +163,7 @@ section p {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--accent);
     cursor: default;
 }
 
@@ -175,7 +174,7 @@ section p {
 
 .card:hover {
     transform: scale(1.05) translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0, 210, 255, 0.4);
+    box-shadow: 0 0 20px var(--accent);
     border-color: var(--accent);
 }
 
